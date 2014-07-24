@@ -1,0 +1,502 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="ja"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang="ja"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="ja"><!--<![endif]-->
+<head>
+<meta name="google-site-verification" content="bbmgxNwBaUKE1zNX1j3hvxHxEOSDBKQGYV8tKe24Mgg" />
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>株式会社アライト　ーDeveloper Blogー | 株式会社アライト</title>
+<link rel="alternate" type="application/rss+xml" title="Arit Developer Blog » フィード" http://arit-clt.com/category/blog/feed/">
+<link rel="pingback" href="http://arit-clt.com/xmlrpc.php" />
+<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<link rel="alternate" type="application/rss+xml" title="株式会社アライト &raquo; フィード" href="http://arit-clt.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="株式会社アライト &raquo; コメントフィード" href="http://arit-clt.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="株式会社アライト &raquo; [ cocos2d-x ] -パーティクル・システムを使用する②- のコメントのフィード" href="http://arit-clt.com/2014/05/13/cocos/feed/" />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://arit-clt.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=3.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='google_fonts-css'  href='//fonts.googleapis.com/css?family=Cantata+One%7CLato%3A300%2C700&#038;ver=3.9.1' type='text/css' media='all' />
+<link rel='stylesheet' id='theme_stylesheet-css'  href='http://arit-clt.com/wp-content/themes/magazine-basic/style.css?ver=3.9.1' type='text/css' media='all' />
+<link rel='stylesheet' id='shCore-css'  href='http://arit-clt.com/wp-content/plugins/syntax-highlighter/3.0.83/css/shCore.css?ver=3.0.83' type='text/css' media='all' />
+<link rel='stylesheet' id='shCoreDefault-css'  href='http://arit-clt.com/wp-content/plugins/syntax-highlighter/3.0.83/css/shCoreDefault.css?ver=3.0.83' type='text/css' media='all' />
+<link rel='stylesheet' id='shThemeDefault-css'  href='http://arit-clt.com/wp-content/plugins/syntax-highlighter/3.0.83/css/shThemeDefault.css?ver=3.0.83' type='text/css' media='all' />
+<script type='text/javascript' src='http://arit-clt.com/wp-content/plugins/projekktor-html5-video-extensions-and-shortcodes/js/jquery.js?ver=1.4.2'></script>
+<script type='text/javascript' src='http://arit-clt.com/wp-content/plugins/projekktor-html5-video-extensions-and-shortcodes/js/projekktor.min.js?ver=0.9.00'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://arit-clt.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://arit-clt.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='[ cocos2d-x ] -パーティクル・システムを使用する①-' href='http://arit-clt.com/2014/05/07/cocos2d-x-%e3%83%91%e3%83%bc%e3%83%86%e3%82%a3%e3%82%af%e3%83%ab%e3%83%bb%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e3%82%92%e4%bd%bf%e7%94%a8%e3%81%99%e3%82%8b%e2%91%a0/' />
+<link rel='next' title='Starling Frameworkを使う' href='http://arit-clt.com/2014/05/21/starling-framework%e3%82%92%e4%bd%bf%e3%81%86/' />
+<meta name="generator" content="WordPress 3.9.1" />
+<link rel='canonical' href='http://arit-clt.com/2014/05/13/cocos/' />
+<link rel='shortlink' href='http://arit-clt.com/?p=1555' />
+<!-- HeadSpace SEO 3.6.41 by John Godley - urbangiraffe.com -->
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-43778251-1']);
+  _gaq.push(['_trackPageview']);
+
+
+
+
+  (function() {
+    var ga = document.createElement('script' ); ga.type = 'text/javascript'; ga.async = true;
+    ga.src =( 'https:' == document.location.protocol ? 'https://ssl' : 'http://www' ) + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script' )[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<meta name="description" content="パーティクル・システムを使用する②" />
+<meta name="keywords" content="Android, cocos2d, cocos2d-html, cocos2d-x, iOS, 参考, 開発, Particle,　パーティクル" />
+<!-- HeadSpace -->
+<style>
+#site-title a,#site-description{color:#333 !important}
+#page{background-color:#ffffff}
+.entry-meta a,.entry-content a,.widget a{color:#3D97C2}
+</style>
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<script type="text/javascript">
+var PROJEKKTORGLOBAL = {"messages":{"0":"An unknown error occurred","1":"You aborted the media playback. ","2":"A network error caused the media download to fail part-way. ","3":"The media playback was aborted due to a corruption problem.","4":"The media could not be loaded, either because the server or network failed or because the format is not supported.","5":"Sorry, your browser does not support the media format of the requested clip. ","6":"You need to update your Flash Plugin to a newer version!","7":"No media scheduled.","8":"! Invalid media model configured !","97":"No media scheduled.","98":"Invalid or malformed playlist data!","99":"Click display to proceed."},"controls":true,"playerFlashMP4":"http:\/\/arit-clt.com\/wp-content\/plugins\/projekktor-html5-video-extensions-and-shortcodes\/flash\/jarisplayer.swf","playerFlashMP3":"http:\/\/arit-clt.com\/wp-content\/plugins\/projekktor-html5-video-extensions-and-shortcodes\/flash\/jarisplayer.swf","enableFlashFallback":true,"volume":0,"plugins":["Display","Controlbar","Share"],"poster":"http:\/\/arit-clt.com\/wp-content\/plugins\/projekktor-html5-video-extensions-and-shortcodes\/default-poster.jpg","plugin_share":{"links":{"twitter":false,"facebook":false},"embed":false}};
+</script>
+<link rel="stylesheet" href="http://arit-clt.com/wp-content/plugins/projekktor-html5-video-extensions-and-shortcodes//themes/maccaco/style.css?ver=Array" type="text/css" media="screen" /><style type="text/css" id="custom-background-css">
+body.custom-background { background-image: url('http://10.121.1.50/html/AritTestWp/wp-content/themes/magazine-basic/library/images/solid.png'); background-repeat: repeat; background-position: top left; background-attachment: scroll; }
+</style>
+<script language="javascript" type="text/javascript">
+ SyntaxHighlighter.config.bloggerMode = true;
+ SyntaxHighlighter.defaults['toolbar'] = false;
+ SyntaxHighlighter.all();
+</script>
+
+<div id="fb-root"></div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43778251-1', 'arit-clt.com');
+  ga('send', 'pageview');
+
+</script>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<body class="single single-post postid-1555 single-format-standard custom-background siteorigin-panels left-sidebar">
+	<div id="page" class="grid ">
+<header id="header" class="row" role="banner"style="height:80px;">
+			<div class="c12"style="position:fixed; z-index:100; background: #FF475D;">
+				<div id="drop-down-search"><form role="search" method="get" id="searchform" class="slide" action="http://arit-clt.com/" >
+    <label class="assistive-text" for="site-search">Search for:</label>
+    <input type="search" placeholder="Search&hellip;" value="" name="s" id="site-search" />
+    </form></div>
+								
+				<nav id="site-navigation" role="navigation">
+					<div class="menu-menu-container"><ul id="menu-menu" class="menu"><li id="menu-item-106" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-106"><a href="http://arit-clt.com/"><img src="http://arit-clt.com/wp-content/uploads/top/title.png" alt="Title" /></a></li>
+<li id="menu-item-94" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-94"><a href="http://arit-clt.com/"><img src="http://arit-clt.com/wp-content/uploads/2013/11/home.png" alt="Top" /></a></li>
+<li id="menu-item-95" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95"><a href="http://arit-clt.com/company/"><img src="http://arit-clt.com/wp-content/uploads/2013/11/company.png" alt="Company" /></a></li>
+<li id="menu-item-97" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-97"><a href="http://arit-clt.com/access/"><img src="http://arit-clt.com/wp-content/uploads/2013/11/access.png" alt="Access" /></a></li>
+<li id="menu-item-96" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-96"><a href="http://arit-clt.com/work/"><img src="http://arit-clt.com/wp-content/uploads/2013/11/work.png" alt="Work" /></a></li>
+<li id="menu-item-98" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children sub-menu-parent menu-item-98"><a href="http://arit-clt.com/contact/"><img src="http://arit-clt.com/wp-content/uploads/2013/11/contact.png" alt="Contact" /></a>
+<ul class="sub-menu">
+	<li id="menu-item-149" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-149"><a href="http://arit-clt.com/%e3%81%8a%e5%95%8f%e3%81%84%e5%90%88%e3%82%8f%e3%81%9b%e3%83%95%e3%82%a9%e3%83%bc%e3%83%a0/">お問い合わせフォーム</a></li>
+	<li id="menu-item-148" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-148"><a href="http://arit-clt.com/%e5%80%8b%e4%ba%ba%e6%83%85%e5%a0%b1%e4%bf%9d%e8%ad%b7%e6%96%b9%e9%87%9d/">個人情報保護方針</a></li>
+	<li id="menu-item-147" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-147"><a href="http://arit-clt.com/%e3%83%91%e3%83%bc%e3%83%88%e3%83%8a%e3%83%bc%e5%8b%9f%e9%9b%86/">パートナー募集</a></li>
+</ul>
+</li>
+<li id="menu-item-152" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-152"><a href="http://arit-clt.com/category/blog/"><img src="http://arit-clt.com/wp-content/uploads/2013/11/blog.png" alt="Blog" /></a></li>
+</ul></div>				</nav><!-- #site-navigation -->
+
+				<nav id="site-sub-navigation" role="navigation">
+									</nav><!-- #site-sub-navigation -->
+			</div><!-- .c12 -->
+		</header><!-- #header.row -->
+
+		<div id="main" class="row">
+			<div id="left-nav"></div>
+			
+<div id="secondary" style="position:fixed; padding-right:10px; width:330px; max-width:25%; min-width:0px;" class="c3"role="complementary">
+<div id="sidefix">
+	<div id="imgpile" max-width="100%" height="auto" >
+		<a href="http://arit-clt.com/category/blog/">
+			<img src="http://arit-clt.com/wp-content/uploads/button/diary_01.png" alt="blogbg">
+			<img src="http://arit-clt.com/wp-content/uploads/button/diary_02.png" alt="blogfront" class="bfront"></a>
+	</div>
+	<a href="http://arit-clt.com/representativegreetings/">
+		<img src="http://arit-clt.com/wp-content/uploads/button/president.png" alt="president">
+	</a>
+	<div id="imgpile"  max-width="100%" height="auto" >
+		<a href="http://arit-clt.com/contact/">
+			<img src="http://arit-clt.com/wp-content/uploads/button/contact01.png" alt="contactbg">
+			<img src="http://arit-clt.com/wp-content/uploads/button/contact02.png" alt="contactmsg" class="conmsg">
+			<img src="http://arit-clt.com/wp-content/uploads/button/contact03.png" alt="contactinfo" class="coninfo">
+		</a>
+	</div>
+</div>
+</div>
+
+	
+	<div id="primary" style="left:28%; padding-left:1%; top:10%; height=50%; max-width: 70%; min-width: 0px;" class="c6" role="main">
+			<article id="post-1555" class="post-1555 post type-post status-publish format-standard hentry category-cocos category-blog tag-android tag-cocos2d tag-cocos2d-html tag-cocos2d-x tag-ios tag-particle tag-34 tag-17 tag-14">
+
+	    <header>
+                <h3 class="post-category"><a href="http://arit-clt.com/category/blog/cocos/" title="cocos2d の投稿をすべて表示" rel="category tag">cocos2d</a>, <a href="http://arit-clt.com/category/blog/" title="Developer Blog の投稿をすべて表示" rel="category tag">Developer Blog</a></h3>
+                <h1 class="entry-title">
+                    [ cocos2d-x ] -パーティクル・システムを使用する②-                </h1>
+    <h2 class="entry-meta">
+        &nbsp;<time class="published" datetime="2014-05-13">2014年5月13日</time>&nbsp;&bull;&nbsp;<a href="http://arit-clt.com/2014/05/13/cocos/#respond" title="[ cocos2d-x ] -パーティクル・システムを使用する②- へのコメント">0 Comments</a>    </h2>
+</header>
+
+	    <div class="entry-content">
+			    <!-- google_ad_section_start --><p><a href="http://arit-clt.com/2014/05/07/cocos2d-x-%e3%83%91%e3%83%bc%e3%83%86%e3%82%a3%e3%82%af%e3%83%ab%e3%83%bb%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e3%82%92%e4%bd%bf%e7%94%a8%e3%81%99%e3%82%8b%e2%91%a0/" title="[ cocos2d-x ] -パーティクル・システムを使用する①-">前回</a>は、Particle Designerの使用方法とファイルの出力方法を紹介致しました。<br />
+今回は、パーティクル作成ツールから出力したファイルを使用しcocos2d-xでパーティクルを表示させます。</p>
+<p>
+cocos2d-xは、とても簡単にパーティクルを表示させることが出来ます。</p>
+<p>まずは、下記の２つのファイルを&#8221;Resource&#8221;フォルダ直下に配置します。</p>
+<ul>
+<li>パーティクルとして表示するpngファイル (どのようなものでも構いません)</li>
+<li>Particle Designerから出力したplistファイル (パーティクルを制御する各パラメータが記載されているリスト)</li>
+</ul>
+<p>
+&nbsp; 　<img src="http://arit-clt.com/wp-content/uploads/blog_img/20140514/0001.png" title="[ cocos2d x ]  パーティクル・システムを使用する② " alt="0001 [ cocos2d x ]  パーティクル・システムを使用する② " /><br />
+<br />
+あとは下記の３行を表示させたい箇所に追加するだけでパーティクルを表示することが出来ます。</p>
+<pre class="brush: cpp; toolbar: false; auto-links: false;">
+   
+    CCParticleSystemQuad* particle = CCParticleSystemQuad::create("particle.plist");
+    particle->setPosition(ccp(480, 320));
+    this->addChild(particle);
+
+</pre>
+<p>
+&nbsp; 　<img src="http://arit-clt.com/wp-content/uploads/blog_img/20140514/particle0001.gif" title="[ cocos2d x ]  パーティクル・システムを使用する② " alt="particle0001 [ cocos2d x ]  パーティクル・システムを使用する② " /></p>
+<p>パーティクル表示の際に使用する基本的な関数をいくつかあげておきます。</p>
+<ul>
+<li>stopSystem()　⇒　パーティクルの停止</li>
+<li>resetSystem()　⇒　パーティクルの開始</li>
+<li>setDuration( float )　⇒　引数で指定した秒数後に自動的にパーティクルを停止</li>
+</ul>
+<p>
+パーティクルの各種パラメータはプログラム上で変更可能です。<br />
+setAngle( float )で放出角度、　setStartSize( flaot )でパーティクル発生時のサイズの設定等があり<br />
+関数名とツール上のパラメータ名は、ほぼ同じような表記となっていますので<br />
+ツールでパーティクルを作成した方は、比較的簡単にパラメータ設定が出来ると思います。</p>
+<p>詳しくは<a onclick="javascript:pageTracker._trackPageview('/outgoing/www.cocos2d-x.org/reference/native-cpp/V2.2.3/dd/dd8/classcocos2d_1_1_c_c_particle_system.html');"  href="http://www.cocos2d-x.org/reference/native-cpp/V2.2.3/dd/dd8/classcocos2d_1_1_c_c_particle_system.html">リファレンス</a>を参考にして下さい。</p>
+<p>また、CCSpriteと同様にCCActionを使用可能なので、CCSequenceで制御すればいろいろと面白い表現が出来そうです。</p>
+<p>&nbsp; 　<img src="http://arit-clt.com/wp-content/uploads/blog_img/20140514/particle0002.gif" title="[ cocos2d x ]  パーティクル・システムを使用する② " alt="particle0002 [ cocos2d x ]  パーティクル・システムを使用する② " /></p>
+<p>
+以上で、plistを使用したパーティクルの実装方法の説明は終了となります。</p>
+<p>
+■ おまけ<br />
+plistを使用したほうが遥かに実装が楽なので、あまり使われることがないかと思いますが<br />
+ソースコードで直接パラメータを設定する方法も記載しておきます。</p>
+<pre class="brush: cpp; toolbar: false; auto-links: false;">
+　
+　
+    //同時に表示するパーティクルの数を指定してインスタンスを生成
+    CCParticleSystem* particle = CCParticleSystemQuad::createWithTotalParticles(16);
+    //画像を設定
+    particle->setTexture(CCTextureCache::sharedTextureCache()->addImage( "particle.png" ));  
+    //放出角度
+    particle->setAngle(90.0f);
+    //上記パラメータに対するばらつき 360で全方向
+    particle->setAngleVar(0.0f);    
+    //再生開始後に何秒で停止するか -1で永遠に動作し続ける
+    particle->setDuration(-1.f);
+    //開始時の色
+    particle->setStartColor(ccc4f(1.0f, 1.0f, 1.0f, 1.0f));
+    //上記パラメータに対するばらつき
+    particle->setStartColorVar(ccc4f(0.0f, 0.0f, 0.0f, 0.5f));
+    //終了時の色
+    particle->setEndColor(ccc4f(0.7f, 0.7f, 0.7f, 0.0f));
+    //上記パラメータに対するばらつき
+    particle->setEndColorVar(ccc4f(0.0f, 0.0f, 0.0f, 0.0f));
+    //開始時のサイズ
+    particle->setStartSize(100.0f);
+    //上記パラメータに対するばらつき
+    particle->setStartSizeVar(50.0f);
+    //終了時のサイズ
+    particle->setEndSize(70.0f);
+    //上記パラメータに対するばらつき
+    particle->setEndSizeVar(0.0f);
+   
+    //1つの画像の生存時間
+    particle->setLife(1.0f);
+    //上記パラメータに対するばらつき
+    particle->setLifeVar(10.0f);
+    //終了時の回転
+    particle->setEndSpin(140.0f);
+    //上記パラメータに対するばらつき
+    particle->setEndSpinVar(0.0f);
+    //開始時の回転
+    particle->setStartSpin(330.0f);
+    //上記パラメータに対するばらつき
+    particle->setStartSpinVar(-230.0f);
+    //上記パラメータに対するばらつき
+    particle->setPosVar(ccp(0.0f, 0.0f));
+    
+    //タイプの指定(kCCParticleModeGravity or kCCParticleModeRadius)
+    particle->setEmitterMode(kCCParticleModeGravity);
+    
+    /* ### setEmitterModeでGravityを選択した場合 ### */
+    //重力の設定
+    particle->setGravity(ccp(0.0f, 0.0f));
+    //放出速度
+    particle->setSpeed(20.0f);
+    //上記パラメータに対するばらつき
+    particle->setSpeedVar(140.0f);
+    //エミッタを中心に回転
+    particle->setTangentialAccel(50.0f);
+    //上記パラメータに対するばらつき
+    particle->setTangentialAccelVar(320.0f);
+    //回転しながら加速
+    particle->setRadialAccel(50.0f);
+    //上記パラメータに対するばらつき
+    particle->setRadialAccelVar(0.0f);
+    /* ### setEmitterModeでGravityを選択した場合 ### */
+
+    /* ### setEmitterModeでRadiusを選択した場合 ### */
+    //開始時の半径
+    particle->setStartRadius(50.0f);
+    //上記パラメータに対するばらつき
+    particle->setStartRadiusVar(0.0f);
+    //終了時の半径
+    particle->setEndRadius(25.f);
+    //上記パラメータに対するばらつき
+    particle->setEndRadiusVar(0.0f);
+    //進む角度
+    particle->setRotatePerSecond(60.0f);
+    //上記パラメータに対するばらつき
+    particle->setRotatePerSecondVar(0.0f);
+    /* ### setEmitterModeでRadiusを選択した場合 ### */
+    
+    //blendの設定
+    ccBlendFunc blend = { GL_SRC_ALPHA, GL_ONE };
+    particle->setBlendFunc(blend);
+    //パーティクル終了時に親から自動で削除
+    particle->setAutoRemoveOnFinish( true );
+    //親に張り付け
+    this->addChild(particle);
+</pre>
+<p>■参考パーティクル<br />
+<br />
+&nbsp; 　<img src="http://arit-clt.com/wp-content/uploads/blog_img/20140514/particle0003.gif" title="[ cocos2d x ]  パーティクル・システムを使用する② " alt="particle0003 [ cocos2d x ]  パーティクル・システムを使用する② " /></p>
+<p>&nbsp; 　<img src="http://arit-clt.com/wp-content/uploads/blog_img/20140514/particle0004.gif" title="[ cocos2d x ]  パーティクル・システムを使用する② " alt="particle0004 [ cocos2d x ]  パーティクル・システムを使用する② " /></p>
+<p>&nbsp; 　<img src="http://arit-clt.com/wp-content/uploads/blog_img/20140514/particle0005.gif" title="[ cocos2d x ]  パーティクル・システムを使用する② " alt="particle0005 [ cocos2d x ]  パーティクル・システムを使用する② " /></p>
+<p>&nbsp; 　<img src="http://arit-clt.com/wp-content/uploads/blog_img/20140514/particle0006.gif" title="[ cocos2d x ]  パーティクル・システムを使用する② " alt="particle0006 [ cocos2d x ]  パーティクル・システムを使用する② " /></p>
+<p>炎、煙、水のパーティクルを使用したサンプル動画です。<br />
+<div id="playerBoxFFFAHBGA" class="projekktor" style="width:645px;height:359px;"></div>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+projekktor("#playerBoxFFFAHBGA", $.extend(true, {}, PROJEKKTORGLOBAL, {"autoplay":false,"ID":1555,"width":645,"height":359,"controls":true,"loop":"","poster":"http:\/\/arit-clt.com\/wp-content\/plugins\/projekktor-html5-video-extensions-and-shortcodes\/default-poster.jpg","playlist":[[{"src":"http:\/\/arit-clt.com\/wp-content\/uploads\/blog_img\/20140514\/work.mov"}]]}));
+})</script>
+<br />
+<br />
+＜次回の更新について＞<br />
+<a href="http://arit-clt.com/2014/05/21/starling-framework%e3%82%92%e4%bd%bf%e3%81%86/" title="Starling Frameworkを使う">次回</a>からは、cocos2d-xから少し離れ&#8221;starling framework&#8221;についてご紹介します。</p>
+<p></p>
+<!-- google_ad_section_end -->	<div class="fb-like" data-href=http://arit-clt.com/2014/05/13/cocos/ data-layout="box_count" data-action="like" data-show-	faces="false" data-share="true"></div>
+	    </div><!-- .entry-content -->
+	        <footer class="entry">
+	    <p class="tags">Tags: <a href="http://arit-clt.com/tag/android/" rel="tag">Android</a> <a href="http://arit-clt.com/tag/cocos2d/" rel="tag">cocos2d</a> <a href="http://arit-clt.com/tag/cocos2d-html/" rel="tag">cocos2d-html</a> <a href="http://arit-clt.com/tag/cocos2d-x/" rel="tag">cocos2d-x</a> <a href="http://arit-clt.com/tag/ios/" rel="tag">iOS</a> <a href="http://arit-clt.com/tag/particle/" rel="tag">Particle</a> <a href="http://arit-clt.com/tag/%e3%83%91%e3%83%bc%e3%83%86%e3%82%a3%e3%82%af%e3%83%ab/" rel="tag">パーティクル</a> <a href="http://arit-clt.com/tag/%e5%8f%82%e8%80%83/" rel="tag">参考</a> <a href="http://arit-clt.com/tag/%e9%96%8b%e7%99%ba/" rel="tag">開発</a></p>	</footer><!-- .entry -->
+	
+
+	</article><!-- #post-1555 -->
+			<div id="posts-pagination">
+				<h3 class="assistive-text">Post navigation</h3>
+				<div class="previous fl"><a href="http://arit-clt.com/2014/05/07/cocos2d-x-%e3%83%91%e3%83%bc%e3%83%86%e3%82%a3%e3%82%af%e3%83%ab%e3%83%bb%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e3%82%92%e4%bd%bf%e7%94%a8%e3%81%99%e3%82%8b%e2%91%a0/" rel="prev">&larr; [ cocos2d-x ] -パーティクル・システムを使用する①-</a></div>
+				<div class="next fr"><a href="http://arit-clt.com/2014/05/21/starling-framework%e3%82%92%e4%bd%bf%e3%81%86/" rel="next">Starling Frameworkを使う &rarr;</a></div>
+			</div><!-- #posts-pagination -->
+
+			
+<div id="comments" class="comments-area">
+
+	
+	
+									<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">コメントを残す <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2014/05/13/cocos/#respond" style="display:none;">コメントをキャンセル</a></small></h3>
+									<form action="http://arit-clt.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																			<p class="comment-notes">メールアドレスが公開されることはありません。 <span class="required">*</span> が付いている欄は必須項目です</p>							<p class="comment-form-author"><input id="author" name="author" type="text" required size="30" placeholder="Name *" aria-required="true" /></p>
+<p class="comment-form-email"><input id="email" name="email" type="email" required size="30" placeholder="Email *" aria-required="true" /></p>
+<p class="comment-form-url"><input id="url" name="url" type="url" size="30" placeholder="Website" /></p>
+
+<div class="captchaSizeDivSmall"><img id="si_image_com" class="si-captcha" src="http://arit-clt.com/wp-content/plugins/si-captcha-for-wordpress/captcha/securimage_show.php?si_sm_captcha=1&amp;si_form_id=com&amp;prefix=vyfHp4M6R5zudaGx" width="132" height="45" alt="キャプチャ画像" title="キャプチャ画像" />
+    <input id="si_code_com" name="si_code_com" type="hidden"  value="vyfHp4M6R5zudaGx" />
+    <div id="si_refresh_com">
+<a href="#" rel="nofollow" title="画像のリフレッシュ" onclick="si_captcha_refresh('si_image_com','com','/wp-content/plugins/si-captcha-for-wordpress/captcha','http://arit-clt.com/wp-content/plugins/si-captcha-for-wordpress/captcha/securimage_show.php?si_sm_captcha=1&amp;si_form_id=com&amp;prefix='); return false;">
+      <img class="captchaImgRefresh" src="http://arit-clt.com/wp-content/plugins/si-captcha-for-wordpress/captcha/images/refresh.png" width="22" height="20" alt="画像のリフレッシュ" onclick="this.blur();" /></a>
+  </div>
+  </div>
+<br />
+<p><input id="captcha_code" name="captcha_code" type="text" size="6"  />
+<label id="captcha_code_label" for="captcha_code" >キャプチャコード</label><span class="required">*</span>
+</p>												<p class="comment-form-comment"><textarea id="comment" name="comment" required cols="45" rows="8" placeholder="Comment *" aria-required="true"></textarea></p>												<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="コメントを送信" />
+							<input type='hidden' name='comment_post_ID' value='1555' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+											</form>
+							</div><!-- #respond -->
+			
+</div><!-- #comments .comments-area -->
+			</div><!-- #primary.c8 -->
+
+		<div id="tertiary" style="position:fixed; width:1175px; max-width:94.0%; min-width:0px;" class="c3 end" role="complementary">
+			<div id="imgpile"  style="position: absolute; right:0px; /*float:right;*/" >
+					<img src="http://arit-clt.com/wp-content/uploads/icon/frame.png" alt="frame">
+					<a href="https://twitter.com/" target="_blank"><img src="http://arit-clt.com/wp-content/uploads/icon/twitter.png" alt="twtimg" class="tw"></a>
+					<a href="http://www.facebook.com/Arit.clt" target="_blank"><img src="http://arit-clt.com/wp-content/uploads/icon/facebook.png" alt="fbimg" class="fb"></a>
+					<a href="http://arit-clt.com/category/blog/feed/" target="_blank"><img src="http://arit-clt.com/wp-content/uploads/icon/rss.png" alt="rssimg" class="rss"></a>
+					<a href="#top"><img src="http://arit-clt.com/wp-content/uploads/icon/TOPPAGE.png" alt="topscr" id="scrtop" class="scr"></a>
+			</div>
+
+
+
+		</div><!-- #tertiary.widget-area -->
+			</div> <!-- #main.row -->
+</div> <!-- #page.grid -->
+
+<center>
+<footer id="footer" role="contentinfo">
+	
+	<div id="imgpile2" style="width:94.7%; height:300px">
+		<div>
+			<div class="arc_div01">
+	 			<h3 class="widget-title">Archives</h3>
+	 				<li><a href='http://arit-clt.com/2014/07/'>2014年7月</a></li>
+	<li><a href='http://arit-clt.com/2014/06/'>2014年6月</a></li>
+	<li><a href='http://arit-clt.com/2014/05/'>2014年5月</a></li>
+	<li><a href='http://arit-clt.com/2014/04/'>2014年4月</a></li>
+	<li><a href='http://arit-clt.com/2014/03/'>2014年3月</a></li>
+	<li><a href='http://arit-clt.com/2014/02/'>2014年2月</a></li>
+	<li><a href='http://arit-clt.com/2014/01/'>2014年1月</a></li>
+	<li><a href='http://arit-clt.com/2013/12/'>2013年12月</a></li>
+	<li><a href='http://arit-clt.com/2013/11/'>2013年11月</a></li>
+	<li><a href='http://arit-clt.com/2013/10/'>2013年10月</a></li>
+			</div>
+				
+			<div class="arc_div02">
+			<h3 class="widget-title">Category</h3>
+
+			 
+			<li><a href="http://arit-clt.com/category/admob%e5%ba%83%e5%91%8a/">
+				Admob広告</a>
+			</li>
+			 
+			<li><a href="http://arit-clt.com/category/blog/cocos/">
+				cocos2d</a>
+			</li>
+			 
+			<li><a href="http://arit-clt.com/category/blog/">
+				Developer Blog</a>
+			</li>
+			 
+			<li><a href="http://arit-clt.com/category/feathers/">
+				Feathers</a>
+			</li>
+			 
+			<li><a href="http://arit-clt.com/category/blog/starling-framework-blog/feathers-starling-framework-blog/">
+				Feathers</a>
+			</li>
+			 
+			<li><a href="http://arit-clt.com/category/blog/starling-framework-blog/">
+				Starling Framework</a>
+			</li>
+			 
+			<li><a href="http://arit-clt.com/category/blog/%e7%92%b0%e5%a2%83%e6%a7%8b%e7%af%89/">
+				環境構築</a>
+			</li>
+						</div>
+			<div class="fb-activity"  data-app-id="arit.clt.act" data-site="http://www.arit-clt.com/" data-action="likes, recommends" data-width="550" data-height="200" data-colorscheme="dark" data-header="true"></div>
+		</div>
+
+		<div>
+		<div style="position:absolute; max-width:100%; min-width:0px;bottom:0px; left:0px"><img src="http://arit-clt.com/wp-content/uploads/under/rogo03.png" alt="footerogo3" class="imgZindex"></div>
+		<div style="position:absolute;  max-width:100%; min-width:0px;bottom:0px; left:0px"><img src="http://arit-clt.com/wp-content/uploads/under/rogo01.png" alt="footerogo1" class="imgZindex"></div>
+		<div style="position:absolute;  max-width:100%; min-width:0px;bottom:0px; left:0px"><img src="http://arit-clt.com/wp-content/uploads/under/rogo02.png" alt="footerogo2" class="imgZindex"></div>
+		</div>
+	</div>
+
+	<div id="footer-content" class="grid ">
+		<div class="row">
+
+		</div><!-- .row -->
+	</div><!-- #footer-content.grid -->
+
+</footer><!-- #footer -->
+</center>
+
+<script type='text/javascript' src='http://arit-clt.com/wp-content/plugins/si-captcha-for-wordpress/captcha/si_captcha.js?ver=1.0'></script>
+<script type="text/javascript">
+//<![CDATA[
+var si_captcha_styles = "\
+<!-- begin SI CAPTCHA Anti-Spam - comment form style -->\
+<style type='text/css'>\
+div#captchaImgDiv { display:block; }\
+.captchaSizeDivSmall { width:175px; height:45px; padding-top:10px; }\
+.captchaSizeDivLarge { width:250px; height:60px; padding-top:10px; }\
+img#si_image_com,#si_image_reg,#si_image_log,#si_image_side_login { border-style:none; margin:0; padding-right:5px; float:left; }\
+.captchaImgRefresh { border-style:none; margin:0; vertical-align:bottom; }\
+div#captchaInputDiv { display:block; padding-top:15px; padding-bottom:5px; }\
+label#captcha_code_label { margin:0; }\
+input#captcha_code { width:65px; }\
+</style>\
+<!-- end SI CAPTCHA Anti-Spam - comment form style -->\
+";
+jQuery(document).ready(function($) {
+$('head').append(si_captcha_styles);
+});
+//]]>
+</script>
+
+<!-- tracker added by Ultimate Google Analytics plugin v1.6.0: http://www.oratransplant.nl/uga -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-43778251-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+<!-- Powered by WPtouch: 3.4.3 --><script type="text/javascript" src="http://arit-clt.com/wp-content/plugins/syntax-highlighter/3.0.83/js/shCore.js?ver=3.0.83"></script>
+<script type="text/javascript" src="http://arit-clt.com/wp-content/plugins/syntax-highlighter/3.0.83/js/shBrushCpp.js?ver=3.0.83"></script>
+<script type="text/javascript">//<![CDATA[
+SyntaxHighlighter.all();
+//]]></script>
+<script type='text/javascript' src='http://arit-clt.com/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.50.0-2014.02.05'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/arit-clt.com\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"\u9001\u4fe1\u4e2d ..."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://arit-clt.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=3.8.1'></script>
+<script type='text/javascript' src='http://arit-clt.com/wp-includes/js/comment-reply.min.js?ver=3.9.1'></script>
+<script type='text/javascript' src='http://arit-clt.com/wp-content/themes/magazine-basic/library/js/harvey.min.js?ver=3.9.1'></script>
+<script type='text/javascript' src='http://arit-clt.com/wp-content/themes/magazine-basic/library/js/theme.js?ver=3.9.1'></script>
+</body>
+</html>
