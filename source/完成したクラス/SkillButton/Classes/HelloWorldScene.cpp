@@ -1,3 +1,7 @@
+/*====================*/
+//	作成者：森勇介
+//	作成日：2014/07/28
+/*====================*/
 #include "HelloWorldScene.h"
 USING_NS_CC;
 
@@ -52,9 +56,9 @@ bool HelloWorld::init()
     //タッチ処理
     auto listener = EventListenerTouchOneByOne::create();
     listener->setSwallowTouches(true);
-    listener->onTouchBegan = CC_CALLBACK_2(HelloWorld::onTouchBegan, this);
-    listener->onTouchMoved = CC_CALLBACK_2(HelloWorld::onTouchMoved,this);
-    listener->onTouchEnded = CC_CALLBACK_2(HelloWorld::onTouchEnded, this);
+    listener->onTouchBegan = CC_CALLBACK_2(HelloWorld::onTouchBegan, this);	//タッチ時
+    listener->onTouchMoved = CC_CALLBACK_2(HelloWorld::onTouchMoved,this);	//タッチ中の移動
+    listener->onTouchEnded = CC_CALLBACK_2(HelloWorld::onTouchEnded, this);	//タッチ終了時
     auto dip = Director::getInstance()->getEventDispatcher();
     dip->addEventListenerWithSceneGraphPriority(listener, this);
 

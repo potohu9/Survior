@@ -1,3 +1,7 @@
+/*====================*/
+//	作成者：森勇介
+//	作成日：2014/07/28
+/*====================*/
 #include "SkillButton.h"
 USING_NS_CC;
 //コンストラクタ
@@ -26,18 +30,13 @@ SkillButton::~SkillButton(){
 
 //クールタイム
 void SkillButton::collTimeUpdete(){
-	/*if(skillState==false){
-		collTimeCount++;
-		if(collTime<=collTimeCount){
-			skillState = true;
-			collTimeCount = 0;
-		}
-	}*/
+	//0以上　＝　スキル押されてクールタイム中だったら
 	if(collTimeCount>0){
-		collTimeCount--;
+		collTimeCount--;	//クールタイム減らす
+		//クールタイム終了したら
 		if(collTimeCount<=0){
-			skillState = true;
-			collTimeCount = 0;
+			skillState = true;	//再びスキルボタンを押せるようにする
+			collTimeCount = 0;	//クールタイムを0にする
 		}
 	}
 }
@@ -47,14 +46,11 @@ void SkillButton::teachSkill(){
 
 }
 
-//表示するときとかのボタンを出す
-/*Menu* SkillButton::getButton(){
-	return pBtn;
-}*/
-
+//スプライトを出す
 Sprite* SkillButton::getButton(){
 	return sprite;
 }
+
 //位置調整用
 void SkillButton::setPosition(Vec2 xy){
 	sprite->setPosition(xy);
@@ -63,7 +59,7 @@ void SkillButton::setPosition(Vec2 xy){
 //ボタンおされた
 void SkillButton::myButtonCallback(){
 
-	switch(skillState){
+	/*switch(skillState){
 	case true:
 		collTimeCount=collTime;
 		skillState = false;
@@ -73,8 +69,19 @@ void SkillButton::myButtonCallback(){
 		sprite->setRotation(0);
 		skillState = true;
 		break;
-	}
+	}*/
+	//スキルが発動可能かどうか
+	if(skillState){
+		collTimeCount=collTime;	//クールタイムをセット
+		skillState = false;		//スキル発動不可にセット
+		teachSkill();			//スキル情報を伝える
 
+		sprite->setRotation(180);	//テスト用　上下反転
+	} else {
+		//テスト用　スキル発動不可時
+		sprite->setRotation(0);	//上下戻す
+		skillState = true;		//スキル発動可能にセット
+	}
 }
 
 

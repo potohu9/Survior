@@ -1,6 +1,10 @@
+/*====================*/
+//	作成者：森勇介
+//	作成日：2014/07/28
+/*====================*/
 #include "SkillButtonFactory.h"
 
-
+//スキルボタンを作る関数
 SkillButton SkillButtonFactory::makeSkillButtonFactory(int skillId){
 	//引数は　「String image, int collTime, int skillType」
 	switch(skillId){
@@ -23,8 +27,8 @@ SkillButton SkillButtonFactory::makeSkillButtonFactory(int skillId){
 		return SkillButton("Bomu.png", 200, skillId);
 		break;
 	default:
-		return SkillButton("HelloWorld.png", 200, 1);
+		return SkillButton("Bomu.png", 200, skillId);
 		break;
 	}
-	return SkillButton("HelloWorld.png", 200, 1);
+	return SkillButton("Bomu.png", 200, skillId);
 }
