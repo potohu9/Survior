@@ -74,40 +74,27 @@ bool HelloWorld::init()
     
     //ボタン
     SkillButtonFactory skillButtonFactory;		//ファクトリーを作る
-    auto skillButton1 = skillButtonFactory.makeSkillButtonFactory(1);	//ファクトリーでスキルボタンを作る 盾
-    skillButton1.setPosition( Vec2(visibleSize.width-200,950) );	//位置
-   //this->addChild( skillButton1.getButton() );	//追加
-
-    auto skillButton2 = skillButtonFactory.makeSkillButtonFactory(2);	//ファクトリーでスキルボタンを作る 盾
-    skillButton2.setPosition( Vec2(visibleSize.width-300,750) );	//位置
-    //this->addChild( skillButton2.getButton() );	//追加
-
-    SkillButton skillButton3 = skillButtonFactory.makeSkillButtonFactory(1);	//ファクトリーでスキルボタンを作る 盾
-    skillButton3.setPosition( Vec2(visibleSize.width-400,550) );	//位置
-    //this->addChild( skillButton3.getButton() );	//追加
-
+    SkillButton skillButton1 = skillButtonFactory.makeSkillButtonFactory(1);	//ファクトリーでスキルボタンを作る 剣
+    SkillButton skillButton2 = skillButtonFactory.makeSkillButtonFactory(2);	//ファクトリーでスキルボタンを作る 盾
+    SkillButton skillButton3 = skillButtonFactory.makeSkillButtonFactory(1);	//ファクトリーでスキルボタンを作る 剣
     SkillButton skillButton4 = skillButtonFactory.makeSkillButtonFactory(2);	//ファクトリーでスキルボタンを作る 盾
-    skillButton4.setPosition( Vec2(visibleSize.width-500,350) );	//位置
-    //this->addChild( skillButton4.getButton() );	//追加
+    SkillButton skillButton5 = skillButtonFactory.makeSkillButtonFactory(1);	//ファクトリーでスキルボタンを作る 剣
 
-    SkillButton skillButton5 = skillButtonFactory.makeSkillButtonFactory(1);	//ファクトリーでスキルボタンを作る 盾
-    skillButton5.setPosition( Vec2(visibleSize.width-600,150) );	//位置
+    /*skillButton1.setPosition( Vec2(visibleSize.width-200,800) );	//位置
+    skillButton2.setPosition( Vec2(visibleSize.width-200,500) );	//位置
+    skillButton3.setPosition( Vec2(visibleSize.width-200,200) );	//位置*/
 
+    skillButton1.setPosition( Vec2(visibleSize.width-200,950) );	//位置
+    skillButton2.setPosition( Vec2(visibleSize.width-200,750) );	//位置
+    skillButton3.setPosition( Vec2(visibleSize.width-200,550) );	//位置
 
+    skillButton4.setPosition( Vec2(visibleSize.width-200,350) );	//位置
+    skillButton5.setPosition( Vec2(visibleSize.width-200,150) );	//位置
 
-    /*SkillButton skillButton1 = skillButtonFactory.makeSkillButtonFactory(1);	//ファクトリーでスキルボタンを作る 盾
-       skillButton1.setPosition( Vec2(visibleSize.width-200,950) );	//位置
-      //this->addChild( skillButton1.getButton() );	//追加
-
-       SkillButton skillButton2 = skillButtonFactory.makeSkillButtonFactory(2);	//ファクトリーでスキルボタンを作る 盾
-       skillButton2.setPosition( Vec2(visibleSize.width-300,750) );	//位置*/
-    //this->addChild( skillButton5.getButton() );	//追加
-
-
-    this->addChild( skillButton2.getButton() );	//追加
-    this->addChild( skillButton4.getButton() );	//追加
     this->addChild( skillButton1.getButton() );	//追加
+    this->addChild( skillButton2.getButton() );	//追加
     this->addChild( skillButton3.getButton() );	//追加
+    this->addChild( skillButton4.getButton() );	//追加
     this->addChild( skillButton5.getButton() );	//追加
 
     //init()の中で

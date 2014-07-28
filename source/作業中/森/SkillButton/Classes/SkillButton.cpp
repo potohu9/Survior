@@ -16,13 +16,11 @@ SkillButton::SkillButton(/*Sprite* sprite,*/std::string image, int collTime, int
 	//this->player = player;
 
 	 //ボタン
-
-	 //MenuItemImage *pBtnItem = MenuItemImage::create(image, "CloseNormal.png", CC_CALLBACK_1(SkillButton::myButtonCallback, this));
-	 MenuItemImage *pBtnItem = MenuItemImage::create(image, image, CC_CALLBACK_1(SkillButton::myButtonCallback, this));
+	 MenuItemImage *pBtnItem = MenuItemImage::create(image, "CloseNormal.png", CC_CALLBACK_1(SkillButton::myButtonCallback, this));
 	 pBtnItem->setScale(0.4);
+	 //pBtnItem->setScale(0.5);
 	 pBtn = Menu::create(pBtnItem, NULL);
 	 pBtn->setPosition(ccp(100, 200));
-
 }
 
 //デストラクタ
@@ -31,9 +29,16 @@ SkillButton::~SkillButton(){
 
 //クールタイム
 void SkillButton::collTimeUpdete(){
-	if(skillState==false){
+	/*if(skillState==false){
 		collTimeCount++;
 		if(collTime<=collTimeCount){
+			skillState = true;
+			collTimeCount = 0;
+		}
+	}*/
+	if(collTimeCount>0){
+		collTimeCount--;
+		if(collTimeCount<=0){
 			skillState = true;
 			collTimeCount = 0;
 		}
@@ -56,10 +61,16 @@ void SkillButton::setPosition(Vec2 xy){
 
 //ボタンおされた
 void SkillButton::myButtonCallback(Ref* pSender){
-	if(skillState==true){
-		skillState=false;
-		//teachSkill();
+
+	switch(skillState){
+	case true:
+		collTimeCount=collTime;
+		skillState = false;
+		break;
+	default:
+		break;
 	}
+
 }
 
 
