@@ -1,0 +1,5 @@
+敵とか自キャラとかが継承する[Character]クラスを作った
+
+[Character]クラスは[CharaData][CharaState]の二つのクラスを持っている
+・[CharaData]　ー 位置　移動方向　Sprite HPを持つ
+・[CharaState] ー スキルの発動状態　ステータス異常を持つ　[例]0b00000000発動なし　0b00100001左から3ツ目と一番右が発動している
