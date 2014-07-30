@@ -5,8 +5,8 @@
 #pragma once
 class CharaState{
 private:
-	int skillId;
-	int abnormalId;
+	int skillId;	//スキル発動状態
+	int abnormalId;	//ステータス異常
 public:
 	CharaState();
 	~CharaState();

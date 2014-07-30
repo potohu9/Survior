@@ -7,10 +7,10 @@
 
 class CharaData{
 private:
-	cocos2d::Vec3 pos;
-	cocos2d::Vec3 vec;
-	cocos2d::Sprite* sprite;
-	int hp;
+	cocos2d::Vec3 pos;	//ˆÊ’u
+	cocos2d::Vec3 vec;	//•ûŒü‚×‚­
+	cocos2d::Sprite* sprite;	//ŠG
+	int hp;				//‘Ì—Í
 public:
 	CharaData();
 	CharaData(cocos2d::Vec3 pos, cocos2d::Vec3 vec, cocos2d::Sprite* sprite, int hp);

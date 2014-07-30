@@ -8,8 +8,8 @@
 #include "CharaState.h"
 class Character{
 private:
-	CharaData charaDate;
-	CharaState charaState;
+	CharaData charaDate;	//キャラクターデータ
+	CharaState charaState;	//キャラクター状態異常
 public:
 	Character(cocos2d::Vec3 pos, cocos2d::Vec3 vec, cocos2d::Sprite* sprite, int hp);
 	~Character();
