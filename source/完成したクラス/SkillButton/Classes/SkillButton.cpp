@@ -1,13 +1,9 @@
-/*====================*/
-//	作成者：森勇介
-//	作成日：2014/07/28
-/*====================*/
 #include "SkillButton.h"
 USING_NS_CC;
 //コンストラクタ
 SkillButton::SkillButton(){
 }
-SkillButton::SkillButton(std::string image, int collTime, int skillType){
+SkillButton::SkillButton(std::string image, int collTime, int skillType, cocos2d::Node* node){
 	//クールタイムのカウント
 	int collTimeCount = 0;
 	//スキルの状態
@@ -22,6 +18,7 @@ SkillButton::SkillButton(std::string image, int collTime, int skillType){
 	this->collTime = collTime;
 	//スキル効果を与える対象
 	//this->player = player;
+	this->node = node;
 }
 
 //デストラクタ
@@ -45,10 +42,12 @@ void SkillButton::collTimeUpdete(){
 void SkillButton::teachSkill(){
 
 }
-
-//スプライトを出す
-Sprite* SkillButton::getButton(){
+cocos2d::Sprite* SkillButton::getButton(){
 	return sprite;
+}
+//表示
+void SkillButton::render(){
+	node->addChild( sprite );
 }
 
 //位置調整用
@@ -58,18 +57,6 @@ void SkillButton::setPosition(Vec2 xy){
 
 //ボタンおされた
 void SkillButton::myButtonCallback(){
-
-	/*switch(skillState){
-	case true:
-		collTimeCount=collTime;
-		skillState = false;
-		sprite->setRotation(180);
-		break;
-	default:
-		sprite->setRotation(0);
-		skillState = true;
-		break;
-	}*/
 	//スキルが発動可能かどうか
 	if(skillState){
 		collTimeCount=collTime;	//クールタイムをセット

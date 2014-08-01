@@ -9,5 +9,7 @@ CharaData::CharaData(Vec3 pos, Vec3 vec, Sprite* sprite, int hp){
 	this->hp = hp;		//‘Ì—Í
 }
 CharaData::~CharaData(){
-
+}
+Sprite* CharaData::getSprite(){
+	return sprite;
 }

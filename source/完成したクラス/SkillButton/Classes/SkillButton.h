@@ -21,14 +21,16 @@ private:
 	int collTime;
 	//スキルの種類
 	int skillType;
-	//スキル効果を与える対象
-	//Player player;
+	//プレイヤに渡す
+	//preiya
+
+	cocos2d::Node* node;
 
 public:
 	//関数
 	//コンストラクタ
 	SkillButton();
-	SkillButton(std::string image, int collTime, int skillType);
+	SkillButton(std::string image, int collTime, int skillType, cocos2d::Node* node);
 	//デストラクタ
 	~SkillButton();
 	//押されたらプレイヤーのstateに教える
@@ -37,6 +39,8 @@ public:
 	void collTimeUpdete();
 	//表示するときとかのボタンを出す
 	cocos2d::Sprite* getButton();
+	//表示
+	void render();
 	//位置調整用
 	void setPosition(cocos2d::Vec2 xy);
 	//ボタン系

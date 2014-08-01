@@ -15,4 +15,5 @@ public:
 	CharaData();
 	CharaData(cocos2d::Vec3 pos, cocos2d::Vec3 vec, cocos2d::Sprite* sprite, int hp);
 	~CharaData();
+	cocos2d::Sprite* getSprite();
 };
