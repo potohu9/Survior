@@ -1,5 +1,8 @@
 #include "Enemy.h"
-Enemy::Enemy(cocos2d::Vec3 pos, cocos2d::Vec3 vec, cocos2d::Sprite* sprite, int hp,/*AI,テンプレート*/cocos2d::Node* node) : Character(pos, vec, sprite, hp, node){
+
+Enemy::Enemy() : Character(){
+}
+Enemy::Enemy(cocos2d::Vec3 pos, cocos2d::Vec3 vec, std::string image, int hp,/*AI,テンプレート*/cocos2d::Node* node) : Character(pos, vec, image, hp, node){
 	//moveAi
 	//atakkuAi
 	//攻撃サイン(予兆）/滝口
@@ -9,7 +12,6 @@ Enemy::Enemy(cocos2d::Vec3 pos, cocos2d::Vec3 vec, cocos2d::Sprite* sprite, int 
 	//アタックテンプレート
 }
 Enemy::~Enemy(){
-
 }
 void Enemy::Update(){
 	//AIのアップデート
@@ -21,4 +23,3 @@ void teachAttack(){
 	//アタックテンプレートを見てアタックを作る
 	//作ったアタックをアタックシステムに教える
 }
-
