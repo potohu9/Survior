@@ -1,0 +1,7 @@
+使い方
+
+ControllerScript を　オブジェクトに関連付ける　
+
+注意
+現在のソースは　キー入力での制御なので
+NPCに付けるときは　ControllerScriptを書き換えてね☆彡
