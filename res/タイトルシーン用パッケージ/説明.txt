@@ -1,5 +1,0 @@
-スクリプト内の
-
-Application.LoadLevel("anime");
-
-の("anime")の【anime】を自分のシーン名に変えてね
